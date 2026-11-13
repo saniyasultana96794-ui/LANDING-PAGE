@@ -1,90 +1,209 @@
 
+/* ===== GLOBAL RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  width: 100%;
+  min-height: 100%;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background: #080d1b;
-  color: white;
+  width: 100%;
   min-height: 100vh;
+  min-height: 100dvh;
+
+  font-family: Arial, Helvetica, sans-serif;
+  background: #080d1b;
+  color: #ffffff;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
   padding: 20px;
 }
 
+/* ===== MAIN CONTAINER ===== */
 .container {
   width: 100%;
   max-width: 420px;
+
+  margin: auto;
+  padding: 30px 24px;
+
   text-align: center;
-  padding: 35px 25px;
+
+  background: linear-gradient(
+    145deg,
+    #111a30,
+    #0b1222
+  );
+
+  border: 1px solid rgba(255,255,255,0.10);
   border-radius: 24px;
-  background: linear-gradient(145deg, #111a30, #0b1222);
-  border: 1px solid rgba(255,255,255,.1);
-  box-shadow: 0 20px 60px rgba(0,0,0,.4);
+
+  box-shadow: 0 20px 60px rgba(0,0,0,0.45);
 }
 
-.telegram-icon {
-  width: 90px;
-  height: 90px;
-  background: #229ED9;
+/* ===== PROFILE IMAGE ===== */
+.profile-image {
+  display: block;
+
+  width: 125px;
+  height: 125px;
+
+  max-width: 100%;
+
+  margin: 0 auto 24px;
+
+  object-fit: cover;
+  object-position: center;
+
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto 25px;
-  font-size: 45px;
+
+  border: 3px solid #229ED9;
+
+  box-shadow:
+    0 0 20px rgba(34,158,217,0.30);
 }
 
+/* ===== HEADING ===== */
 h1 {
-  font-size: 28px;
+  font-size: 26px;
+  font-weight: 700;
+
   margin-bottom: 12px;
 }
 
+/* ===== DESCRIPTION ===== */
 .subtitle {
   color: #aab5cc;
+
   font-size: 15px;
-  line-height: 1.6;
+  line-height: 1.7;
+
   margin-bottom: 28px;
 }
 
+/* ===== TELEGRAM BUTTON ===== */
 .join-btn {
-  display: block;
+  display: flex;
+
   width: 100%;
-  padding: 17px;
+  min-height: 58px;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 16px 18px;
+
   border-radius: 14px;
-  background: linear-gradient(135deg, #229ED9, #1478c8);
-  color: white;
-  font-size: 17px;
-  font-weight: bold;
+
+  background: linear-gradient(
+    135deg,
+    #229ED9,
+    #1478c8
+  );
+
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 700;
+
   text-decoration: none;
-  box-shadow: 0 8px 25px rgba(34,158,217,.3);
-  transition: .25s;
+
+  box-shadow:
+    0 8px 25px rgba(34,158,217,0.30);
+
+  transition: all 0.25s ease;
 }
 
 .join-btn:hover {
   transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 30px rgba(34,158,217,0.40);
 }
 
 .join-btn:active {
-  transform: scale(.98);
+  transform: scale(0.97);
 }
 
-.footer {
-  margin-top: 25px;
-  color: #71809c;
-  font-size: 12px;
-}
-
+/* ===== CHANNEL BADGE ===== */
 .badge {
   display: inline-block;
-  margin-top: 18px;
-  padding: 7px 14px;
-  background: rgba(34,158,217,.12);
+
+  margin-top: 20px;
+  padding: 9px 15px;
+
+  background: rgba(34,158,217,0.12);
+
   color: #55c7ff;
+
   border-radius: 50px;
+
   font-size: 12px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  margin-top: 28px;
+
+  color: #71809c;
+
+  font-size: 12px;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 480px) {
+  body {
+    padding: 16px;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+
+    padding: 30px 22px;
+
+    border-radius: 22px;
+  }
+
+  .profile-image {
+    width: 130px;
+    height: 130px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .join-btn {
+    min-height: 58px;
+    font-size: 16px;
+  }
+}
+
+/* ===== SMALL MOBILE ===== */
+@media (max-width: 360px) {
+  .container {
+    padding: 25px 18px;
+  }
+
+  .profile-image {
+    width: 110px;
+    height: 110px;
+  }
+
+  h1 {
+    font-size: 23px;
+  }
 }
