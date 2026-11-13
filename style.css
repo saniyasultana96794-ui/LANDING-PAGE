@@ -1,0 +1,90 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #080d1b;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  padding: 35px 25px;
+  border-radius: 24px;
+  background: linear-gradient(145deg, #111a30, #0b1222);
+  border: 1px solid rgba(255,255,255,.1);
+  box-shadow: 0 20px 60px rgba(0,0,0,.4);
+}
+
+.telegram-icon {
+  width: 90px;
+  height: 90px;
+  background: #229ED9;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 25px;
+  font-size: 45px;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  color: #aab5cc;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.join-btn {
+  display: block;
+  width: 100%;
+  padding: 17px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #229ED9, #1478c8);
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 8px 25px rgba(34,158,217,.3);
+  transition: .25s;
+}
+
+.join-btn:hover {
+  transform: translateY(-3px);
+}
+
+.join-btn:active {
+  transform: scale(.98);
+}
+
+.footer {
+  margin-top: 25px;
+  color: #71809c;
+  font-size: 12px;
+}
+
+.badge {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 7px 14px;
+  background: rgba(34,158,217,.12);
+  color: #55c7ff;
+  border-radius: 50px;
+  font-size: 12px;
+}
